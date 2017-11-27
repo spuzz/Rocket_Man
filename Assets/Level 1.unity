@@ -1168,10 +1168,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4597359379910540, guid: dfffb670d23ebc345af6d31c07d326a6, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -17.710001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfffb670d23ebc345af6d31c07d326a6, type: 2}
   m_IsPrefabParent: 0
@@ -1349,6 +1345,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42654a82bdea3e8458f403adac024fc2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1398085972 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1850893021915838, guid: 1891b70f6e2273d41928da88c90a0448,
+    type: 2}
+  m_PrefabInternal: {fileID: 1855961044}
+--- !u!114 &1398085976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1398085972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54649e2021a177d40b1f6485ee4a1043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: -10, y: 0, z: 0}
+  movementFactor: 1
 --- !u!1001 &1414086790
 Prefab:
   m_ObjectHideFlags: 0
