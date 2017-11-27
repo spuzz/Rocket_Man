@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour {
@@ -16,11 +17,13 @@ public class Rocket : MonoBehaviour {
     [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem deathParticles;
 
+    bool collisionOn;
     enum State { Alive, Dying, Transcending }
     [SerializeField]  State state = State.Alive;
     int currentScene;
     // Use this for initialization
     void Start () {
+        collisionOn = true;
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         currentScene = SceneManager.GetActiveScene().buildIndex;
@@ -35,11 +38,29 @@ public class Rocket : MonoBehaviour {
             RespondToRotateInput();
         }
 
+        if(Debug.isDebugBuild)
+        {
+            RespondToDebugKeys();
+        }
+        
+    }
+
+    private void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionOn = !collisionOn;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive) { return; }
+        if (state != State.Alive || collisionOn == false) { return; }
 
         switch (collision.gameObject.tag)
         {
@@ -77,7 +98,14 @@ public class Rocket : MonoBehaviour {
 
     private void LoadNextLevel()
     {
-        SceneManager.LoadScene(currentScene + 1);
+        if (currentScene + 1 < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(currentScene + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(currentScene);
+        }
     }
 
     private void LoadCurrentLevel()
