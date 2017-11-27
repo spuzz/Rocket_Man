@@ -104,7 +104,7 @@ public class Rocket : MonoBehaviour {
         }
         else
         {
-            SceneManager.LoadScene(currentScene);
+            SceneManager.LoadScene(0);
         }
     }
 
