@@ -152,6 +152,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1806967092961312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4519980019678332}
+  - component: {fileID: 108019976176528962}
+  m_Layer: 0
+  m_Name: Ship Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1925984518369084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4443421642879838}
+  - component: {fileID: 108173744428280806}
+  m_Layer: 0
+  m_Name: Ship illumination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1926592619088804
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +272,19 @@ Transform:
   m_Father: {fileID: 4597359379910540}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4443421642879838
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925984518369084}
+  m_LocalRotation: {x: -0.021487374, y: 6.984919e-10, z: -0, w: 0.99976915}
+  m_LocalPosition: {x: -0.000000014901161, y: 0.5500001, z: -4.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4597359379910540}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: -2.4620001, y: 0, z: 0}
 --- !u!4 &4455721115178560
 Transform:
   m_ObjectHideFlags: 1
@@ -253,6 +298,19 @@ Transform:
   m_Father: {fileID: 4597359379910540}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4519980019678332
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1806967092961312}
+  m_LocalRotation: {x: -0.331409, y: -0.000000022351742, z: -0.000000044703484, w: 0.9434872}
+  m_LocalPosition: {x: 0.00000059604645, y: 3.4999998, z: -15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4597359379910540}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -38.709003, y: 0, z: 0}
 --- !u!4 &4597359379910540
 Transform:
   m_ObjectHideFlags: 1
@@ -272,6 +330,8 @@ Transform:
   - {fileID: 4303823376873286}
   - {fileID: 4635168508156240}
   - {fileID: 4120305981527700}
+  - {fileID: 4519980019678332}
+  - {fileID: 4443421642879838}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -17.710001}
@@ -704,6 +764,78 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!108 &108019976176528962
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1806967092961312}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 0.25866538, g: 0.053200692, b: 0.9044118, a: 1}
+  m_Intensity: 21.59
+  m_Range: 22.09
+  m_SpotAngle: 60
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!108 &108173744428280806
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925984518369084}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 18.09
+  m_Range: 10
+  m_SpotAngle: 59
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!114 &114516118566837666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -717,6 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rcsThrust: 100
   mainThrust: 1000
+  levelLoadDelay: 1
   mainEngine: {fileID: 8300000, guid: 0cd0091b3e63ab74e802c2d388554e59, type: 3}
   audioDying: {fileID: 8300000, guid: 12855358fdacc794da3cec9b16579287, type: 3}
   audioFinished: {fileID: 8300000, guid: 6ddd568523297284786283dff7a366c5, type: 3}
